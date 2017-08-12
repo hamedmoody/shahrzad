@@ -1,0 +1,301 @@
+@import url('css/fontiran.css');
+body *{
+	font-family: IRANSans;
+}
+.topmenu{
+	/*background: rgba(255,255,255,.84);*/
+	background: white;
+	font-size: 25px;
+	height: 55px;
+	padding-top: 5px;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
+}
+
+.container-fluid.topmenu {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.42);
+}
+
+.logo{
+	float: right;
+}
+
+.menu{
+	float: right;
+}
+
+.menu li{
+	display: inline-block;
+	padding-right: 30px;
+	font-size: 16px;
+	font-family: tahoma;
+}
+
+.header{
+	padding: 0;
+}
+
+.menu li a{
+	color: #545454;
+	font-weight: 500;
+	transition: .3s;
+	font-size: 12px;
+	display: block;
+	line-height: 200%;
+}
+
+.menu li a:hover{
+	text-decoration: none;
+	color: #1CCDCA;
+	/*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33);*/
+}
+
+.menu > ul > li {
+	position: relative;
+	height: 40px;
+}
+
+ul.children{
+	position: absolute;
+	transition: 2s;
+	padding: 0;
+	background: white;
+	width: 100px;
+	right: 13px;
+	top: 50px;
+	opacity: 0;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.43);
+	overflow: hidden;
+	border-radius: 0 0 2px 2px;
+	visibility: hidden;
+}
+
+.menu > ul > li > ul.children{
+	transition: .3s ease-out;
+}
+
+ul.children li{
+	padding: 0;
+	 padding: 2px 5px; 
+	display: block;
+	border-top: 1px solid #e8e7e7;
+}
+
+ul.children li:first-child{
+	border: none;
+}
+
+ul.children li:hover{
+	background: #313131;
+	padding-right: 10px;
+}
+
+ul.children a{
+	padding: 0 5px;
+}
+
+ul.children li:hover a{
+	color: white;
+}
+
+.menu > ul > li:hover ul.children{
+	opacity: 1;
+	visibility: visible;
+	top: 35px;
+}
+
+
+
+.seasons{
+	background: #212121;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.seasons a{
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.seasons h3{
+	color: white;
+	font-weight: bold;
+}
+
+.timer{
+	background: url(images/bgEarth-2.jpg) fixed;
+	background-size: cover;
+	height: 250px;
+	height: 50vh;
+}
+
+.timer h1{
+	text-align: center;
+	color: black;
+	padding: 15px;
+	background: rgba(255,255,255,.7);
+	margin-top: 25vh;
+}
+
+.amin-logo{
+	text-align: center;
+}
+
+.amin-logo *{
+	margin-top: 40px;
+}
+
+.gallery{
+	background: url(images/sh-back-gal-main-5.jpg) fixed;
+	background-size: cover;
+}
+
+.gallery h3{
+	text-align: center;
+	color: white;
+}
+
+.container-fluid.overlay {
+    background-color: rgba(0, 0, 0, 0.51);
+    margin: 0 -15px;
+    padding: 40px 0;
+}
+
+.gallery-row>div{
+	padding: 5px;
+}
+
+.icon-gallery{
+	position: absolute;
+	top: calc( 50% - 12px );
+	left: calc( 50% - 45px );
+	background-color: rgba(255,255,255,.7);
+	padding: 2px 15px;
+	height: 24px;
+	width: 90px;
+	opacity: 0;
+	border-radius: 2px;
+	/*transition-property: all;*/
+	/*transition-duration: 2s;*/
+	/*transition-timing-function: cubic-bezier(.61,.08,.98,-0.13);*/
+	transition: all 400ms ease-in-out;
+
+}
+
+.gallery-row>div:hover .icon-gallery{
+	opacity: 1;
+	/*background-color: red;*/
+}
+
+.transition{
+	transition: .2s ease-in-out;
+}
+
+.line {
+    display: block;
+    height: 1px;
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dot {
+    position: absolute;
+    display: block;
+    height: 9px;
+    width: 9px;
+    background: #281815;
+    border-radius: 50%;
+    top: -4px;
+    left: calc( 50% - 4px );
+    border: 1px solid #ff004f;
+
+    /*transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);*/
+}
+
+.line:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: #ff004f;
+    height: 1px;
+    top: 0px;
+    width: 100px;
+    left: calc( 50% - 50px );
+    border-radius: 2px;
+    transition: .6s ease-in-out;
+    transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.section-title:hover .line:before{
+	width: 100%;
+	left: 0;
+}
+
+.section-title:hover .dot{
+	height: 1px;
+	width: 1px;
+	border-width: 4px; 
+}
+
+.section-title{
+	margin: 25px 0;
+}
+
+.social-networks{
+	text-align: center;
+}
+
+.khat{
+	width: 300px;
+	height: 3px;
+	background: #eaeaea;
+	display: block;
+	margin: 10px auto;
+	position: relative;
+}
+
+.khat .noghte{
+	background: white;
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	top: -4px;
+	left: calc( 50% - 6px );
+	border: 1px solid #0063ff;
+}
+
+.khat .dynamic-line{
+	background: #0063ff;
+	width: 100px;
+	height: 3px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: calc( 50% - 50px );
+	transition: .5s ease-in-out;
+}
+
+.main-title:hover .dynamic-line{
+	width: 100%;
+	left: 0;
+}
+
+.sn p{
+	line-height: 200%;
+}
+
+.sn > div{
+	/*background: gray;*/
+	transition: .5s ease-in-out;
+	padding: 20px 10px;
+}
+
+.sn > div:hover{
+	box-shadow:  0 0px 9px 0px rgba(0, 0, 0, 0.6);
+
+}
