@@ -194,6 +194,9 @@
 			</div>
 		</div>
 	</div><!-- #social-networks -->
+
+	<button class="btn btn-secondary mybtn">My Button</button>
+
 	<div class="container-fluid" style="background: #f6f6f6; padding: 15px;">
 		<div class="container">
 			<form>
@@ -250,15 +253,17 @@
 		</div>
 	</div>
 	<div class="container">
+		<h2 class="video-toggle"><span>-</span>ویدئوی دوره</h2>
 		<video controls preload="none" poster="images/apple.jpg" class="img-responsive">
 			<source src="videoes/video.mp4" type="video/mp4"/>
 			<source src="videoes/3.ogg" type="video/ogg"/>
 			Sorry your browser does not support video
 		</video>
-		<audio controls>
+		<!-- <audio controls>
 			<source src="shsound.mp3" type="audio/mp3">
-		</audio>
+		</audio> -->
 	</div>
+	
 	<br>
 	<br>
 	<br>
@@ -280,5 +285,61 @@
 	<br>
 	<br>
 	<br>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//Jquery codes
+			
+			/*$("p").click(function(){
+				$('p').hide(2000);
+			});*/
+
+			//var size 	= 25;
+			//var width 	= 40;
+			//var total = size + width;
+			
+			var name = 'Hamed';
+			var family = 'Moodi';
+
+			//alert( name + ' ' + family );
+
+			//if( name == 'Hamed' ) {
+			//	alert('is hamed');
+			//}else{
+			//	alert('your are lier');
+			//}
+
+			$('button.mybtn').click(function(){
+
+				var display = $('.instagram img').css('display');
+
+				if( display == 'none' ) {
+					$('.sn img').show(500);
+				}else{
+					$('.sn img').hide(500);
+				}
+			});
+
+			$(".video-toggle").click(function(){
+
+				$('video').slideToggle(500);
+
+				var sign = $(this).find('span').text();
+
+				if( sign == '-' ) {
+
+					$(this).find('span').text('+');
+
+				}else{
+
+					$(this).find('span').text('-');
+
+				}
+
+			});
+			
+		});
+	</script>
 </body>
 </html>
