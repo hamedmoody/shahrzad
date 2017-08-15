@@ -2,6 +2,15 @@
 body *{
 	font-family: IRANSans;
 }
+
+body{
+	transition: 1s ease-in;
+}
+
+body.blur{
+	filter: blur(4px);
+}
+
 .topmenu{
 	/*background: rgba(255,255,255,.84);*/
 	background: white;
@@ -297,5 +306,16 @@ ul.children li:hover a{
 
 .sn > div:hover{
 	box-shadow:  0 0px 9px 0px rgba(0, 0, 0, 0.6);
+}
 
+#gotop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #00a82e;
+    border: 1px solid #008324;
+    border-bottom-width: 3px;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
 }

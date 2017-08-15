@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="bootstrap-rtl.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
 </head>
 <body>
 	<div class="container-fluid topmenu">
@@ -263,28 +264,7 @@
 			<source src="shsound.mp3" type="audio/mp3">
 		</audio> -->
 	</div>
-	
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<button id="gotop">پرش به بالا</button>
 	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -323,6 +303,7 @@
 
 			$(".video-toggle").click(function(){
 
+
 				$('video').slideToggle(500);
 
 				var sign = $(this).find('span').text();
@@ -338,7 +319,69 @@
 				}
 
 			});
-			
+
+
+			/*
+			$("label").click(function(){
+
+				var text = $(this).text();
+
+				showText( text );
+
+			});
+
+			function showText( myText ) {
+				//Function content	
+				alert('You sayd ' + myText );
+			}
+			*/
+
+
+			$("#gotop").click(function(){
+
+				// var product = {
+				// 	price	: 2000,
+				// 	size 	: '25 مگابایت',
+				// 	instructor 	: 'Rajabian'
+				// };
+				
+				var an = {
+					scrollTop	: 0,
+					//padding		: '300px'
+				}
+
+				//console.log( 'ok' );
+
+				$("body").addClass('blur');
+
+				$("body").animate( an, 2000, function(){
+					
+					$("body").removeClass('blur');
+
+					$(".header img").addClass( 'animated bounce' );
+
+					//$("body").animate( {scrollTop: 1000}, 2000);
+
+				});
+
+			});
+
+			// $("#gotop").mouseenter(function(){
+			// 	console.log( 'mouse mouseenter' );
+			// });
+
+			// $("#gotop").mouseleave(function(){
+			// 	console.log( 'mouse leave' );
+			// });
+
+			$(".menu > ul > li").mouseenter(function(){
+				$(this).addClass('animated bounce');
+			});
+
+			$(".menu > ul > li").mouseleave(function(){
+				$(this).removeClass('animated bounce');
+			});
+
 		});
 	</script>
 </body>
