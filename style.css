@@ -319,3 +319,31 @@ ul.children li:hover a{
     padding: 10px;
     border-radius: 2px;
 }
+
+.acc-item {
+    border: 1px solid #c7c7c7;
+    margin-top: 5px;
+}
+
+.acc-menu {
+    border: 1px solid blue;
+    padding: 15px;
+}
+
+h3.acc-item-title {
+    background: #e2e2e2;
+    padding: 9px 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.acc-item {
+    border-radius: 4px;
+}
+
+.acc-item-content {
+    padding: 10px;
+    text-align: justify;
+    font-size: 13px;
+    line-height: 200%;
+}
