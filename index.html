@@ -5,6 +5,7 @@
 	<title>سایت شهرزاد</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="bootstrap-rtl.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="animate.css">
 </head>
@@ -18,7 +19,7 @@
 			</div>
 			<div class="menu hidden-sm hidden-xs">
 				<ul>
-					<li><a href="#">صفحه اصلی</a></li>
+					<li><a href="#" class="nothing"><i class="fa fa-download fa-2x" style="color: red; margin-left: 10px;" aria-hidden="true"></i>صفحه اصلی</a></li>
 					<li><a href="#">صفحه اصلی</a></li>
 					<li>
 						<a href="#">صفحه اصلی</a>
@@ -45,7 +46,7 @@
 							<li><a href="#">زیر منوی اول</a></li>
 							<li><a href="#">زیر منوی دوم</a></li>
 							<li><a href="#">زیر منوی شوم</a></li>
-							<li><a href="#">زیر منوی چهارم</a></li>
+							<li><a href="#gallery">گالری تصاویر</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -88,7 +89,7 @@
 			<a href="#" class="btn btn-primary transition">ورود به شهرزاد پلاس</a>
 		</div>
 	</div>
-	<div class="container-fluid gallery">
+	<div class="container-fluid gallery" id="gallery">
 		<div class="container-fluid overlay">
 			<div class="container">
 				<div class="section-title">
@@ -295,7 +296,7 @@
 	</div>
 
 	<div id="map" style="width:100%;height:400px"></div>
-	<button id="gotop">پرش به بالا</button>
+	<button id="gotop"><i class="fa fa-ravelry" aria-hidden="true"></i>پرش به بالا</button>
 	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 
 	<!-- Start Google Map -->
@@ -465,6 +466,29 @@
 				$(this).next().slideDown('fast');
 
 			});
+
+			$("a.nothing").click(function(){
+				console.log('clicked on a tag');
+				return false;
+			});
+
+			function test( name ){
+				alert( name );
+			}
+
+			//test('hamed');
+			
+			function sq( digit ){
+				var result = digit * digit;
+				return result;
+			}
+
+			//console.log( sq( 8 ) );
+			//
+			// var name 	= prompt('What is your name?', 'Hamed');
+			// var family 	= prompt('What is your Family?', 'Moodi');
+			// var age 	= prompt('how old are you?', '25');
+			// console.log( name + ' ' + family + ' : ' + age );
 
 		});
 	</script>
