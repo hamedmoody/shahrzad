@@ -5,7 +5,7 @@
 	<title>سایت شهرزاد</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="bootstrap-rtl.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="animate.css">
 </head>
@@ -327,9 +327,57 @@
 		$(document).ready(function(){
 
 			//Start Looping one by one from 0 to 149
-			for ( i = 0; i < 150; i++ ) {
-				console.log(i);
-			}
+			//for ( i = 0; i < 150; i++ ) {
+			//	console.log(i);
+			//}
+			var counter = 0;
+			$('.seasons a.btn').eq(1).click(function(e){
+				e.preventDefault();
+				counter = counter + 1;
+				$('.timer .container')
+					.html('<a href="#">this value ' + counter + '</a>'  )
+					.css({'color': 'white', 'font-size':'40px'});
+				
+				//alert($('.timer .container').text());
+				
+				var html = $('.menu>ul>li').eq(0).html();
+				html = '<li>' + html + '</li>';
+				console.log(html);
+				$('.menu>ul').append(html);
+
+			});
+
+			
+			//console.log( currentTime );
+
+			setInterval( function(){
+				var clock = new Date();
+				var minute, second,am;
+				if( clock.getMinutes() < 10 ){
+					minute = '0' + clock.getMinutes();
+				}else{
+					minute = clock.getMinutes();
+				}
+				if( clock.getSeconds() < 10 ){
+					second = '0' + clock.getSeconds();
+				}else{
+					second = clock.getSeconds()	;
+				}
+				if( clock.getHours() < 12 ){
+					am = 'AM';
+				}else{
+					am = 'PM'
+				}
+				var currentTime = am + ' ' + clock.getHours() + ':' + minute + ':' + second;
+				console.log( currentTime );
+				$('.timer h1').text( currentTime ).css('direction', 'ltr');
+			}, 1000);
+
+			//$('body').animate({scrollTop: $('body').height()}, 3000, function(){
+			//	$('body').animate({scrollTop: 0}, 3000)
+			//});
+			
+
 
 			//Looping two by two from 0 to 149
 			//for ( j = 0; j < 150; j+=2 ) {
@@ -444,11 +492,11 @@
 			// });
 
 			$(".menu > ul > li").mouseenter(function(){
-				$(this).addClass('animated bounce');
+				//$(this).addClass('animated bounce');
 			});
 
 			$(".menu > ul > li").mouseleave(function(){
-				$(this).removeClass('animated bounce');
+				//$(this).removeClass('animated bounce');
 			});
 
 			$(".sn img").click(function(){
@@ -482,6 +530,8 @@
 				var result = digit * digit;
 				return result;
 			}
+
+
 
 			//console.log( sq( 8 ) );
 			//
